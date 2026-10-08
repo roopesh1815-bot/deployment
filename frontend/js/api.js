@@ -1,8 +1,7 @@
 (function () {
   "use strict";
 
-  // Use the forwarded backend URL instead when running in a remote Codespace.
-  const BASE_URL = "http://127.0.0.1:5000";
+  const BASE_URL = "https://deploymentdemo-production-ec3a.up.railway.app";
   const MOCK_MODE = false;
 
   function mockResponse(data, isLogin) {
