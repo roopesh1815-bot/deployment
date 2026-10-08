@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Log in | Northstar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validation.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/login.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="auth-card" aria-labelledby="page-title">
+        <a class="brand" href="index.html" aria-label="Northstar home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Northstar</span>
+        </a>
+        <div class="card-heading">
+          <p class="eyebrow">WELCOME BACK</p>
+          <h1 id="page-title">Log in to your account</h1>
+          <p class="subheading">Enter your details to continue.</p>
+        </div>
+
+        <div class="notice" id="form-notice" role="status" aria-live="polite" hidden></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+              placeholder="you@example.com" required aria-describedby="email-error">
+            <p class="field-error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <div class="label-row">
+              <label for="password">Password</label>
+            </div>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password"
+                placeholder="Enter your password" required aria-describedby="password-error">
+              <button class="password-toggle" type="button" data-toggle-password="password"
+                aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <p class="field-error" id="password-error"></p>
+          </div>
+
+          <button class="submit-button" id="login-submit" type="submit">
+            <span class="button-label">Log in</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <p class="switch-link">New to Northstar? <a href="register.html">Create an account</a></p>
+      </section>
+      <p class="page-caption">A simpler way to manage your account.</p>
+    </main>
+  </body>
+</html>

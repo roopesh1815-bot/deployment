@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Create an account | Northstar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validation.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/register.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="auth-card" aria-labelledby="page-title">
+        <a class="brand" href="index.html" aria-label="Northstar home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Northstar</span>
+        </a>
+        <div class="card-heading">
+          <p class="eyebrow">GET STARTED</p>
+          <h1 id="page-title">Create your account</h1>
+          <p class="subheading">A few details and you’ll be ready to go.</p>
+        </div>
+
+        <div class="notice" id="form-notice" role="status" aria-live="polite" hidden></div>
+
+        <form id="register-form" novalidate>
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="name" type="text" autocomplete="name"
+              placeholder="Jordan Lee" required aria-describedby="full-name-error">
+            <p class="field-error" id="full-name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+              placeholder="you@example.com" required aria-describedby="email-error">
+            <p class="field-error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+              placeholder="10 digits" required aria-describedby="phone-error">
+            <p class="field-error" id="phone-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="new-password"
+                placeholder="Create a strong password" required aria-describedby="password-error">
+              <button class="password-toggle" type="button" data-toggle-password="password"
+                aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <p class="field-hint">Use 8+ characters with uppercase, lowercase, a number, and a symbol.</p>
+            <p class="field-error" id="password-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="confirm-password">Confirm password</label>
+            <div class="password-wrap">
+              <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password"
+                placeholder="Enter your password again" required aria-describedby="confirm-password-error">
+              <button class="password-toggle" type="button" data-toggle-password="confirm-password"
+                aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <p class="field-error" id="confirm-password-error"></p>
+          </div>
+
+          <button class="submit-button" id="register-submit" type="submit">
+            <span class="button-label">Create account</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <p class="switch-link">Already have an account? <a href="login.html">Log in</a></p>
+      </section>
+      <p class="page-caption">A simpler way to manage your account.</p>
+    </main>
+  </body>
+</html>
